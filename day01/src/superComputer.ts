@@ -25,8 +25,8 @@ function superComputer(nb1: number, operator: string, nb2: number, callback: Cal
         return callback(null, nb1 / nb2);
     }
     if (operator === '%') {
-            if (nb2 === 0)
-                return callback(new Error('Modulo by 0'));
+        if (nb2 === 0)
+            return callback(new Error('Modulo by 0'));
         return callback(null, nb1 % nb2);
     }
     return callback(new Error('Invalid operator'));
