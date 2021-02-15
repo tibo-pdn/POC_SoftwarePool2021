@@ -1,13 +1,11 @@
-interface Cosmonaut {
-    name: string;
-    mission: string;
-    country: string;
+import { Cosmonaut } from '../src/types';
+
+export function createCosmonaut(name: string, country: string, mission: string): Cosmonaut {
+  const cosmonaut: Cosmonaut = {
+    name: name,
+    country: country,
+    mission: mission,
+  };
+
+  return cosmonaut;
 }
-
-function createCosmonaut(name: string, country: string, mission: string) : Cosmonaut {
-    let cosmonaut : Cosmonaut = {name:name, country:country, mission:mission};
-
-    return cosmonaut;
-}
-
-console.log(createCosmonaut('Henry', 'France', 'Apollo 11'));
