@@ -39,8 +39,6 @@ server.get('/repeat-my-header', function (req, res) {
     else
         res.status(200).send(req.header('X-message'));
 })
-
-
 server.get('/repeat-my-param/:message', function (req, res) {
     res.send(req.params.message);
 })
